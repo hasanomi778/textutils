@@ -1,0 +1,89 @@
+$darkBody: #18191A;
+$darkHead: #242526;
+$lite: #fff;
+$SubLite: #ddd;
+
+
+body{
+    background-color: $lite;
+    color: $darkBody;    
+    &.darkMode{
+        background-color: $darkBody;
+        color: $SubLite;
+        header{
+            background-color: $darkHead;
+            border-bottom: none;
+        }
+        nav{
+            a{
+                color: #fff;
+                &:hover{
+                    color: $SubLite;
+                }
+            }
+        }
+        textarea{
+            background-color: $darkHead;
+            color: $SubLite;
+        }
+    }
+}
+header{
+padding: 8px 0px;
+border-bottom: 1px solid $SubLite;
+}
+nav{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+    .logoHolder{
+        width: 50px;
+        img{
+            width: 100%;
+        }
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
+    a{
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px;
+        color: $darkBody;
+        text-decoration: none;
+        &:hover{
+            color: #555;
+        }
+    }
+}
+.txtHolder{
+    padding: 50px 0px;
+    label{
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    textarea{
+        width: 100%;
+        padding: 15px;
+        height: 150px;
+        margin-bottom: 5px;
+    }
+    button{
+        &:not(:last-child){
+            margin-right: 12px;
+        }
+    }
+}
