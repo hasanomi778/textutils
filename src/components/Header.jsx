@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 let body = document.body
 
 export default function Header(props) {  
@@ -25,13 +24,15 @@ export default function Header(props) {
         <div className="container">
             <nav>
                 <div className="logoHolder">
-                  <Link to="/"><img src="../logo192.png" alt="" /></Link>
+                  <a href="/">
+                    <img src={require('../logo192.png')} alt="" />
+                  </a>
                 </div>
                 <ul>
-                  <li><Link to="/">{props.homeLink}</Link></li>
-                  <li><Link to="/about">{props.aboutLink}</Link></li>
-                  <li><Link to="/contact">{props.contactLink}</Link></li>
-                  <button type="button" class="btn btn-primary" onClick={modeSwipe}>{modeTxt}</button>
+                  <li><a href="/">{props.homeLink}</a></li>
+                  <li><a href="/">{props.aboutLink}</a></li>
+                  <li><a href="/">{props.contactLink}</a></li>
+                  <button type="button" className="btn btn-primary" onClick={modeSwipe}>{modeTxt}</button>
                 </ul>
             </nav>
         </div>
